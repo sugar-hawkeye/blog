@@ -1,0 +1,22 @@
+version: '3'
+services:
+    db: 
+        image: "hub.c.163.com/library/mysql:latest"
+        container_name: mysql-container
+        env_file: "/Users/wim/Desktop/wim/poster797/blog_env/mysql/db.env"
+        ports:
+            - "3309:3306"
+        volumes:
+            - /Users/wim/Desktop/wim/poster797/blog_env/mysql/data:/var/lib/mysql
+            - /Users/wim/Desktop/wim/poster797/blog_env/mysql/conf.d:/etc/mysql/conf.d
+    web:
+        build: .
+        container_name: django-container
+        depends_on:
+            - db
+        ports:
+            - "8000:8000"
+        links: 
+            - db
+        working_dir: /django_env
+        command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0:8000"
