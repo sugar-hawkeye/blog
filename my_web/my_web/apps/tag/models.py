@@ -5,6 +5,8 @@ from django.db import models
 
 from django.contrib.auth.models import User
 
+
+
 # Create your models here.
 class Tag(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -16,7 +18,7 @@ class Tag(models.Model):
     is_publish = models.BooleanField(default=False, verbose_name="是否发布")
 
 
-    def __str__(self):
+    def __unicode__(self):
         return self.title
 
     class Meta:

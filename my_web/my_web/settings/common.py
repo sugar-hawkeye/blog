@@ -39,10 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-# INSTALLED_APPS += [
-#     'my_web.apps.tag',
-#     'my_web.apps.article',
-# ]
+INSTALLED_APPS += [
+    'pagedown',
+]
+
+INSTALLED_APPS += [
+    'my_web.apps.tag',
+    'my_web.apps.article',
+
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
