@@ -18,8 +18,8 @@ class Tag(models.Model):
     is_publish = models.BooleanField(default=False, verbose_name="是否发布")
 
 
-    def __unicode__(self):
-        return self.title
+
+
 
     class Meta:
         db_table="tag"
@@ -27,3 +27,6 @@ class Tag(models.Model):
         ordering = ['created_at']
         verbose_name = '标签'
         verbose_name_plural = '标签'
+
+    def __str__(self):
+        return self.title

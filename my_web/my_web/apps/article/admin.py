@@ -1,13 +1,12 @@
 from django.contrib import admin
 
-from my_web.apps.article.models import Article, ArticleBody
+from my_web.apps.article.models import Article
+from django.db import models
+from pagedown.widgets import AdminPagedownWidget
 
 class ArticleAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title','tag_name','read_num','is_publish')
+    filter_horizontal = ('tags',)
 
-
-class ArticleBodyAdmin(admin.ModelAdmin):
-    pass
 
 admin.site.register(Article, ArticleAdmin)
-admin.site.register(ArticleBody, ArticleBodyAdmin)

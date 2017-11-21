@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from models import Tag
+from my_web.apps.tag.models import Tag
 
 
 class TagAdmin(admin.ModelAdmin):
