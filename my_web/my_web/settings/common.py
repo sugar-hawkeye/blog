@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     'pagedown',
+    'debug_toolbar',
 ]
 
 INSTALLED_APPS += [
@@ -57,6 +58,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+MIDDLEWARE += [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'my_web.urls'
@@ -125,15 +130,13 @@ USE_TZ = True
 
 
 
-STATIC_URL = '/static/'
+STATIC_URL = '/common_static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "common_static"),
-    os.path.join(BASE_DIR, "/my_web/apps/article/static"),
-    os.path.join(BASE_DIR, "/my_web/apps/tag/static"),
 )
 
-STATIC_ROOT  = os.path.join(BASE_DIR, "collected_static"),
+STATIC_ROOT  = os.path.join(BASE_DIR, "collected_static")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-
+import uuid
 from django.db import models
 
 from django.contrib.auth.models import User
@@ -13,10 +13,11 @@ class Tag(models.Model):
     edited_at = models.DateTimeField(auto_now=True)
     created_by = models.ForeignKey(User, editable=False, on_delete=models.SET_NULL, verbose_name="创建人", null=True,
                                    blank=True)
+
+    tag_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=15, verbose_name='标签名',unique=True)
     priority = models.IntegerField(verbose_name="排列顺序")
     is_publish = models.BooleanField(default=False, verbose_name="是否发布")
-
 
 
 
@@ -27,6 +28,10 @@ class Tag(models.Model):
         ordering = ['created_at']
         verbose_name = '标签'
         verbose_name_plural = '标签'
+        permissions = (
+            ("tag_publish", "Can Publish Tag"),
+            ("tag_delete", "Can Delete Tag"),
+        )
 
     def __str__(self):
         return self.title

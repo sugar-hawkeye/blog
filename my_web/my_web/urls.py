@@ -20,8 +20,21 @@ from django.conf.urls.static import static
 from my_web.settings import common
 
 urlpatterns = [
-    url(r'^manager/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
 ]
 
+# urlpatterns += [
+#     url(r'^article/',include('my_web.apps.article.urls'),name='article_view'),
+#
+# ]
 
-urlpatterns += static(common.STATIC_URL, document_root=common.STATIC_ROOT)
+
+
+
+if common.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns
+
+    urlpatterns += static(common.STATIC_URL, document_root=common.STATIC_ROOT)
