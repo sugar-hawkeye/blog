@@ -1,0 +1,147 @@
+body {
+    margin:0 auto;
+    text-align:center;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 5px solid #f8ff3e;
+    min-width: 900px;
+    min-height: 400px;
+}
+
+.leftbar {
+    background-color: pink;
+    width: 250px;
+    height: 100%;
+    float: left;
+    height: 100%;
+}
+
+#profile {
+    position: relative;
+    top:30%;
+    width: 100%;
+    height: 260px;
+    font-family: "Helvetica Neue";
+    color: white;
+    font-weight: normal;
+
+    background-color: #57504a;
+}
+
+#avator {
+    /*box-shadow: 2px 2px 2px rgba(0,0,0,0.7);*/
+    border: 5px solid white;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/avator.jpg');
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    border-radius: 50%;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    margin:0 auto
+}
+
+#namelabel {
+    position: absolute;
+    top: 80px;
+    width:100%;
+    left: 0px;
+    font-size: 22px;
+
+}
+
+#desclabel {
+    position: absolute;
+    top: 120px;
+    width:100%;
+    left: 0px;
+    font-size: 16px;
+}
+
+#icons {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 170px;
+    float: left;
+
+
+}
+
+#icons img {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+
+}
+
+.content {
+    position: relative;
+    background-color: #ff8f77;
+    margin-right: 200px;
+    margin-left: 250px;
+    height: 100%;
+    border: 5px solid red;
+}
+
+.main-post-list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-right: 200px;
+    border: 5px solid blue;
+}
+
+.post-list {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+.post-list li {
+    margin: 0 0 2.2em 0;
+}
+
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination li {display: inline;}
+
+.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+
+.right {
+    background-color: pink;
+    float: right;
+    width: 200px;
+    height: 100%;
+}
