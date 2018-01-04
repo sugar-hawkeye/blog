@@ -7,13 +7,13 @@
         <option name="settingsModule" value="my_web/settings/dev.py" />
         <option name="manageScript" value="manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
-        <option name="commandsToSkip" value="" />
+        <option name="doNotUseTestRunner" value="false" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6.3 virtualenv at ~/Desktop/wim/poster797/py3_env" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6 (py3_env)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
