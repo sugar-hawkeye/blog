@@ -28,8 +28,10 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse('article_view', args=[str(self.id)])
+    def get_absolute_url(self):
+        path = reverse('article', args=[str(self.article_id)])
+        print('path='+path)
+        return path
 
 
     def tag_name(self):

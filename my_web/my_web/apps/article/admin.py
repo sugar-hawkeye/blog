@@ -15,6 +15,8 @@ class ArticleAdmin(admin.ModelAdmin):
 
     article = None
 
+    view_on_site = True
+
     def get_form(self, request, obj=None, **kwargs):
         if obj:
             if not self.article or obj.article_id != self.article.article_id:

@@ -12,11 +12,13 @@ def save_md(content, name,tag):
     name = name + '.md'
     file = ContentFile(content,name)
     dir = settings.MEDIA_ROOT+'/md/%s/' % tag
-    os.mkdir(dir)
+    if not os.path.exists(dir):
+        os.mkdir(dir)
+
     absolute_path = '/md/%s/' % tag + name
     path = dir + name
 
-    with open(path,'a+') as f:
+    with open(path,'w+') as f:
         file = File(f)
         file.write(content)
     return absolute_path
