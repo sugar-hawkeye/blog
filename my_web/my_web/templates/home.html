@@ -7,31 +7,14 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" >
     <title>Wim's Blog</title>
+    
+    <script>
+        $(document).ready(function () {
+            
+        });
+    </script>
 </head>
 <body>
-{#<div class='container' >#}
-{#    <div class='leftbar' >#}
-{#        <div id="profile">#}
-{#            <div id="avator" />#}
-{#            <p id="namelabel">Wim's Blog</p>#}
-{#            <p id="desclabel">一个正在前行的shef</p>#}
-{#            <div id="icons">#}
-{#                <a>#}
-{#                    <img src="{% static 'img/github.png' %}" alt="github">#}
-{##}
-{#                </a>#}
-{#                <a>#}
-{#                    <img src="{% static 'img/rss.png' %}" alt="rss">#}
-{##}
-{#                </a>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#    <div class='content' >#}
-
-{#    </div>#}
-{#</div>#}
-
 <div class='container' >
     <div class='leftbar' >
         <div id="profile">
@@ -50,49 +33,34 @@
             </div>
         </div>
     </div>
-    <div class="right">
-        right <strong>固定</strong>
-        ----------右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右右
-    </div>
+
 
     <div class="content">
        <div class="main-post-list">
             <ol class="post-list">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
+                {% for article in articles %}
+                    <li>{{ article.title }}</li>
+                {% endfor %}
             </ol>
            <div class="pagination">
                <ul >
-                <li><a href="#">«</a></li>
-                <li><a class="active" href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">»</a></li>
+                   {% for page_item in pagination.page_items %}
+                       {% if page_item == pagination.cur_page %}
+                            <li><a class="active" href="?page={{ page_item }}">{{ page_item }}</a></li>
+                       {% else %}
+                            <li><a href="?page={{ page_item }}">{{ page_item }}</a></li>
+                       {% endif %}
+
+                   {% endfor %}
             </ul>
            </div>
         </div>
+    </div>
+
+    <div class="right">
+        {% for tag in tags %}
+            {{ tag.title }}
+        {% endfor %}
     </div>
 
 </div>
