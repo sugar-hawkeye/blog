@@ -1,69 +1,34 @@
+{% extends "base.html" %}
 {% load static %}
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" >
-    <title>Wim's Blog</title>
-    
-    <script>
-        $(document).ready(function () {
-            
-        });
-    </script>
-</head>
-<body>
-<div class='container' >
-    <div class='leftbar' >
-        <div id="profile">
-            <div id="avator" > </div>
-            <p id="namelabel">Wim's Blog</p>
-            <p id="desclabel">一个正在前行的shef</p>
-            <div id="icons">
-                <a>
-                    <img src="{% static 'img/github.png' %}" alt="github">
-
-                </a>
-                <a>
-                    <img src="{% static 'img/rss.png' %}" alt="rss">
-
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="content">
-       <div class="main-post-list">
-            <ol class="post-list">
-                {% for article in articles %}
-                    <li>{{ article.title }}</li>
-                {% endfor %}
-            </ol>
-           <div class="pagination">
-               <ul >
-                   {% for page_item in pagination.page_items %}
-                       {% if page_item == pagination.cur_page %}
-                            <li><a class="active" href="?page={{ page_item }}">{{ page_item }}</a></li>
-                       {% else %}
-                            <li><a href="?page={{ page_item }}">{{ page_item }}</a></li>
-                       {% endif %}
-
-                   {% endfor %}
-            </ul>
-           </div>
-        </div>
-    </div>
-
-    <div class="right">
-        {% for tag in tags %}
-            {{ tag.title }}
+{% load pull_content %}
+{% load custom_markdown %}
+{% block content %}
+    <ul class="note-list">
+        {% for article in articles %}
+            <li>
+                <a href="{{ article.get_absolute_url }}" >{{ article.title }}</a>
+                <p class="text_content">
+                    {{ article.content | pull_content | truncatechars:120|pure_text}}
+                </p>
+            </li>
         {% endfor %}
-    </div>
 
-</div>
-</body>
-</html>
+
+
+
+    </ul>
+
+    <div class="pagination">
+        <ul >
+            {% for page_item in pagination.page_items %}
+                {% if page_item == pagination.cur_page %}
+                    <li><a class="active" href="?page={{ page_item }}">{{ page_item }}</a></li>
+                {% else %}
+                    <li><a href="?page={{ page_item }}">{{ page_item }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
+
 

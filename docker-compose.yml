@@ -1,22 +1,41 @@
-version: '3'
+version: '2'
 services:
     db: 
-        image: "hub.c.163.com/library/mysql:latest"
+        image: "hub.c.163.com/library/mysql:5.7"
         container_name: mysql-container
-        env_file: "/Users/wim/Desktop/wim/poster797/blog_env/mysql/db.env"
-        ports:
-            - "3309:3306"
+        env_file: "/blog_env/mysql/db.env"
+        expose:
+            - "3306"
         volumes:
-            - /Users/wim/Desktop/wim/poster797/blog_env/mysql/data:/var/lib/mysql
-            - /Users/wim/Desktop/wim/poster797/blog_env/mysql/conf.d:/etc/mysql/conf.d
+            - /blog_env/mysql/data:/var/lib/mysql
+            - /blog_env/mysql/conf.d:/etc/mysql/conf.d
+
     web:
         build: .
         container_name: django-container
         depends_on:
             - db
         ports:
-            - "8000:8000"
+            - "8007:8007"
         links: 
-            - db
+            - db:db
+        volumes:
+            - /blog_env/my_web:/django_env
         working_dir: /django_env
-        command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0:8000"
+        command: bash -c "python manage.py makemigrations && python manage.py migrate &&  gunicorn my_web.wsgi -c gunicorn.conf"
+
+    nginx:
+      build: ./nginx/
+      container_name: blog_nginx
+      ports: 
+        - "9000:80"
+      volumes:
+        - /blog_env/nginx/sites-enabled:/etc/nginx/sites-enabled
+        - /blog_env/nginx/log:/var/log/nginx
+      volumes_from:
+        - web
+      depends_on:
+        - web
+      links:
+        - web:web
+

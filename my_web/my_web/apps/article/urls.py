@@ -1,9 +1,12 @@
-from django.conf.urls import url,include,re_path
+from django.urls import path
 
-from my_web.apps.article.views import articleListView
+from my_web.apps.article.views import articleListView,articleDetailView,searchView
 
 urlpatterns = [
-    url(r'^article/$',articleListView),
-    re_path(r'^article?page=<int:page>/$',articleListView),
-    re_path(r'^article?page=<int:page>&tag=<str:tag>/$',articleListView),
+    path(r'',articleListView),
+    # path(r'/?page=<int:page>/$',articleListView),
+    path(r'search/',searchView),
+    path(r'page=<int:page>&tag=<str:tag>/',articleListView),
+    path(r'article_id=<uuid:articleId>',articleDetailView),
+
 ]

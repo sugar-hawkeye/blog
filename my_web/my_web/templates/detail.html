@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_markdown %}
+
+
+{% block content %}
+    {% autoescape off %}
+        {{ article.content | custom_markdown}}
+    {% endautoescape %}
+{% endblock content %}

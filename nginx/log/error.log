@@ -1,0 +1,43 @@
+2018/01/31 06:59:39 [error] 11#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "0.0.0.0:8000"
+2018/01/31 06:59:39 [error] 11#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "0.0.0.0:8000"
+2018/01/31 06:59:39 [error] 11#0: *1 no live upstreams while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "0.0.0.0:8000", referrer: "http://0.0.0.0:8000/"
+2018/01/31 06:59:56 [error] 11#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "0.0.0.0:8000"
+2018/01/31 06:59:56 [error] 11#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "0.0.0.0:8000"
+2018/01/31 06:59:56 [error] 11#0: *1 no live upstreams while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "0.0.0.0:8000", referrer: "http://0.0.0.0:8000/"
+2018/01/31 07:08:10 [error] 11#0: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "localhost:8000"
+2018/01/31 07:08:10 [error] 11#0: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "localhost:8000"
+2018/01/31 07:08:10 [error] 11#0: *11 no live upstreams while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "localhost:8000", referrer: "http://localhost:8000/"
+2018/01/31 07:32:24 [error] 10#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "0.0.0.0:8000"
+2018/01/31 07:32:24 [error] 10#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "0.0.0.0:8000"
+2018/01/31 07:32:25 [error] 10#0: *1 no live upstreams while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "0.0.0.0:8000", referrer: "http://0.0.0.0:8000/"
+2018/01/31 07:32:35 [error] 10#0: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "localhost:8000"
+2018/01/31 07:32:35 [error] 10#0: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8001/", host: "localhost:8000"
+2018/01/31 07:32:36 [error] 10#0: *6 no live upstreams while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "localhost:8000", referrer: "http://localhost:8000/"
+2018/01/31 08:06:12 [error] 12#0: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:9001/", host: "localhost:9000"
+2018/01/31 08:06:12 [error] 12#0: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:9001/favicon.ico", host: "localhost:9000", referrer: "http://localhost:9000/"
+2018/01/31 08:10:53 [emerg] 29#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2018/01/31 08:10:53 [emerg] 29#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2018/01/31 08:10:53 [emerg] 29#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2018/01/31 08:11:48 [error] 12#0: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:9001/", host: "0.0.0.0:9000"
+2018/01/31 08:11:49 [error] 12#0: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:9001/favicon.ico", host: "0.0.0.0:9000", referrer: "http://0.0.0.0:9000/"
+2018/01/31 08:11:55 [error] 12#0: *10 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:9001/", host: "localhost:9000"
+2018/01/31 08:11:55 [error] 12#0: *10 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:9001/favicon.ico", host: "localhost:9000", referrer: "http://localhost:9000/"
+2018/01/31 08:12:17 [notice] 30#0: signal process started
+2018/01/31 08:26:23 [notice] 168#0: signal process started
+2018/01/31 08:26:23 [error] 168#0: open() "/var/run/nginx.pid" failed (2: No such file or directory)
+2018/01/31 08:28:19 [notice] 178#0: signal process started
+2018/01/31 08:28:22 [emerg] 183#0: bind() to 0.0.0.0:9000 failed (98: Address already in use)
+2018/01/31 08:28:22 [emerg] 183#0: bind() to 0.0.0.0:9000 failed (98: Address already in use)
+2018/01/31 08:28:22 [emerg] 183#0: bind() to 0.0.0.0:9000 failed (98: Address already in use)
+2018/01/31 08:31:37 [notice] 185#0: signal process started
+2018/01/31 08:31:48 [notice] 192#0: signal process started
+2018/01/31 08:32:11 [emerg] 197#0: bind() to 0.0.0.0:9000 failed (98: Address already in use)
+2018/01/31 08:32:11 [emerg] 197#0: bind() to 0.0.0.0:9000 failed (98: Address already in use)
+2018/01/31 08:32:11 [emerg] 197#0: bind() to 0.0.0.0:9000 failed (98: Address already in use)
+2018/01/31 08:32:11 [emerg] 197#0: bind() to 0.0.0.0:9000 failed (98: Address already in use)
+2018/01/31 08:32:11 [emerg] 197#0: bind() to 0.0.0.0:9000 failed (98: Address already in use)
+2018/01/31 08:32:11 [emerg] 197#0: still could not bind()
+2018/01/31 08:34:28 [notice] 199#0: signal process started
+2018/01/31 08:34:34 [notice] 206#0: signal process started
+2018/01/31 08:34:38 [error] 207#0: *1 directory index of "/django_env/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "0.0.0.0:9000"
+2018/01/31 08:34:38 [error] 207#0: *1 open() "/django_env/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "0.0.0.0:9000", referrer: "http://0.0.0.0:9000/"

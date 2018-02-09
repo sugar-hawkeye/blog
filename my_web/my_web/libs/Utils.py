@@ -49,7 +49,9 @@ class Pagination(object):
     # }
 
     @classmethod
-    def pagination(self,all_obj_counts=0,page_count=10,cur_page=1,show_page_item=5):
+    def pagination(self,all_obj_counts=0,page_count=10,cur_page=2,show_page_item=5):
+        num = 0
+        all_page = 0
         if all_obj_counts != 0:
             all_page, num = divmod(all_obj_counts, page_count)
         if num > 0:

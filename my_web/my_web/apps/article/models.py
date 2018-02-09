@@ -29,9 +29,9 @@ class Article(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        path = reverse('article', args=[str(self.article_id)])
-        print('path='+path)
-        return path
+        from my_web.apps.article.views import  articleDetailView
+        return reverse(articleDetailView,args=[self.article_id])
+
 
 
     def tag_name(self):

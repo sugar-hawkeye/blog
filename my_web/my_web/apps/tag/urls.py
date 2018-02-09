@@ -1,7 +1,7 @@
-from django.conf.urls import url,include,re_path
+from django.urls import path
 
 from my_web.apps.tag.views import getTags
 
 urlpatterns = [
-    url(r'^tags/$',getTags),
+    path(r'tag_id=<uuid:tag_id>/',getTags),
 ]

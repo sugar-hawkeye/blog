@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+DEBUG = True
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -23,7 +23,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b!w6#4eov8d+&vg7^jfvo#zaogti9=l5ioa=9b_d51l%a1suwd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -41,7 +40,6 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     'pagedown',
-    'debug_toolbar',
 ]
 
 INSTALLED_APPS += [
@@ -60,9 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-MIDDLEWARE += [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
-]
+
 
 ROOT_URLCONF = 'my_web.urls'
 
@@ -72,6 +68,7 @@ TEMPLATES = [
         'DIRS': ['my_web/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
+            'autoescape': True,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -130,13 +127,13 @@ USE_TZ = True
 
 
 
-STATIC_URL = '/common_static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "common_static"),
 )
 
-STATIC_ROOT  = os.path.join(BASE_DIR, "collected_static")
+STATIC_ROOT  = os.path.join(BASE_DIR, "static")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 

@@ -1,0 +1,73 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'css/code.css' %}" >
+    <title>Wim's Blog</title>
+    
+    <script>
+        $(document).ready(function () {
+            function getTag() {
+                var title = $("searchfield").val();
+                $.get('/search/article='+title,function (result) {
+
+                });
+            }
+
+
+        });
+    </script>
+</head>
+<body>
+<div class='container' >
+    <div class='leftbar' >
+        <div id="profile">
+            <div id="avator" > </div>
+            <p id="namelabel">Wim's Blog</p>
+            <p id="desclabel">一个正在前行的shef</p>
+            <div id="icons">
+                <a>
+                    <img src="{% static 'img/github.png' %}" alt="github">
+
+                </a>
+                <a>
+                    <img src="{% static 'img/rss.png' %}" alt="rss">
+
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+       <div class="main-post-list">
+            {% block content %}
+
+            {% endblock content%}
+        </div>
+    </div>
+    <div class="right">
+        <div class="searchbar">
+            <form action="/home/search/" method="get" target="_blank">
+                <input type="text" placeholder="搜索..." id="searchfield" name="title">
+                <button type="submit"></button>
+            </form>
+        </div>
+
+        <div >
+            <ul class="tags">
+                {% for tag in tags %}
+                    <li><a href="{{ tag.get_absolute_url }}" target="_blank">{{ tag.title }}</a> </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+    </div>
+
+</div>
+</body>
+</html>
+
