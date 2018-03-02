@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf.urls.static import static
-from my_web.settings import common
+from my_web.settings import common,dev
 
 
 
@@ -28,7 +28,7 @@ urlpatterns = [
 
 
 
-if common.DEBUG:
+if dev.DEBUG:
     # import debug_toolbar
     # urlpatterns += [
     #     url(r'^__debug__/', include(debug_toolbar.urls)),

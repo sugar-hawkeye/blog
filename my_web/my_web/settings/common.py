@@ -40,11 +40,13 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     'pagedown',
+    'gunicorn',
 ]
 
 INSTALLED_APPS += [
     'my_web.apps.tag',
     'my_web.apps.article',
+    'my_web.apps.mkeditor',
 
 ]
 

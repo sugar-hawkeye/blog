@@ -1,17 +1,18 @@
 server {
     listen 80;
-    server_name localhost;
+    server_name www.spreader.online spreader.online;
     charset utf-8;
-    root /django_env/;
+    root /blog_env/;
     location ^~ /static {
-        alias /django_env/my_web/collected_static;
+        alias /blog_env/my_web/collected_static;
     }
         
     location /uploads  {
-        alias /django_env/my_web/uploads;
+        alias /blog_env/my_web/uploads;
     }
 
     location / {
+        proxy_pass http://localhost:8007;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
