@@ -1,10 +1,56 @@
 {% extends "base.html" %}
 {% load static %}
-{% load custom_markdown %}
+{#{% load custom_markdown %}#}
 
+{% block links %}
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link rel="stylesheet" href="{% static "css/editormd.preview.css" %}" />
+    <style>
+        .editormd-html-preview {
+            width: 90%;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src={% static "lib/marked.min.js" %}></script>
+    <script src={% static "lib/prettify.min.js" %}></script>
+
+    <script src={% static "lib/raphael.min.js" %}></script>
+    <script src={% static "lib/underscore.min.js" %}></script>
+    <script src={% static "lib/sequence-diagram.min.js" %}></script>
+    <script src={% static "lib/flowchart.min.js" %}></script>
+    <script src={% static "lib/jquery.flowchart.min.js" %}></script>
+
+    <script src={% static "js/editormd.js" %}></script>
+    <script type="text/javascript">
+        $(function() {
+            var testEditormdView2;
+            testEditormdView2 = editormd.markdownToHTML("test-editormd-view2", {
+                htmlDecode      : "style,script,iframe",
+                emoji           : true,
+                taskList        : true,
+                tex             : true,
+                flowChart       : true,
+                sequenceDiagram : true,
+            });
+        });
+    </script>
+{% endblock %}
 
 {% block content %}
-    {% autoescape off %}
-        {{ article.content | custom_markdown}}
-    {% endautoescape %}
+{#    {% autoescape off %}#}
+{#        {{ article.content | custom_markdown}}#}
+{#    {% endautoescape %}#}
+
+<div id="layout">
+
+            <div id="test-editormd-view2">
+                <textarea id="append-test" style="display:none;">
+                {{ markdown }}
+				</textarea>
+            </div>
+        </div>
+
+
 {% endblock content %}

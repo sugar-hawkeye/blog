@@ -41,7 +41,7 @@ def articleDetailView(request,articleId):
     obj = get_object_or_404(Article,article_id=articleId)
     obj.content = read_md(obj.content)
     tags = Tag.objects.all()
-    return render(request,template_name,context={'article':obj,'tags':tags})
+    return render(request,template_name,context={'article':obj,'tags':tags,'markdown':obj.content})
 
 def searchView(request,page=1):
     template_name = "home.html"

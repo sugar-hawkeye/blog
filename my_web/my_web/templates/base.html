@@ -6,7 +6,9 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" >
-    <link rel="stylesheet" type="text/css" href="{% static 'css/code.css' %}" >
+
+    {% block links %}
+    {% endblock %}
     <title>Wim's Blog</title>
     
     <script>
@@ -17,8 +19,6 @@
 
                 });
             }
-
-
         });
     </script>
 </head>
@@ -32,11 +32,9 @@
             <div id="icons">
                 <a>
                     <img src="{% static 'img/github.png' %}" alt="github">
-
                 </a>
                 <a>
                     <img src="{% static 'img/rss.png' %}" alt="rss">
-
                 </a>
             </div>
         </div>
