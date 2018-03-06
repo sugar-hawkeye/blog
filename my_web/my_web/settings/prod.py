@@ -17,3 +17,16 @@ ALLOWED_HOSTS = ['spreader.online',]
 
 
 
+INSTALLED_APPS += [
+    'django_logging',
+]
+
+MIDDLEWARE += [
+    'django_logging.middleware.DjangoLoggingMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+]
+
+
+DJANGO_LOGGING = {
+    "CONSOLE_LOG": False
+}

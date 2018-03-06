@@ -38,10 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-INSTALLED_APPS += [
-    'pagedown',
-    'gunicorn',
-]
 
 INSTALLED_APPS += [
     'my_web.apps.tag',
@@ -49,6 +45,8 @@ INSTALLED_APPS += [
     'my_web.apps.mkeditor',
 
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
