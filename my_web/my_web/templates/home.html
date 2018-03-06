@@ -7,7 +7,7 @@
             <li>
                 <a href="{{ article.get_absolute_url }}" >{{ article.title }}</a>
                 <p class="text_content">
-                    {{ article.content | pull_content | truncatechars:120|pure_text}}
+                    {{ article.content | pull_content | truncatechars:120}}
                 </p>
             </li>
         {% endfor %}
