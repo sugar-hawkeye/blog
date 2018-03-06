@@ -22,7 +22,7 @@ class Article(models.Model):
     read_num = models.PositiveIntegerField(default=0,verbose_name='阅读数')
     zan_num = models.PositiveIntegerField(default=0, verbose_name='点赞数')
 
-    tags = models.ManyToManyField(Tag, verbose_name="所属标签")
+    tags = models.ManyToManyField(Tag, verbose_name="所属标签",null=True,blank=True)
     is_publish = models.BooleanField(default=False, verbose_name="是否发布")
 
     def __str__(self):
