@@ -3,3 +3,5 @@ my_web/my_web/uploads/md/*
 !my_web/my_web/uploads/md/*.gitkeep
 /mysql/data/*
 !/mysql/data/*.gitkeep
+nginx/log/*.log
+my_web/my_web/logs/*.log
