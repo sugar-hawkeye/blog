@@ -1,3 +1,5 @@
 *.pyc
-/my_web/my_web/uploads/*
+my_web/my_web/uploads/*
+!my_web/my_web/uploads/*.gitkeep
 /mysql/data/*
+!/mysql/data/*.gitkeep
