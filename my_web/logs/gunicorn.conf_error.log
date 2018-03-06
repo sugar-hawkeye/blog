@@ -1,0 +1,77 @@
+[2018-03-05 14:20:22 +0800] [2027] [INFO] Starting gunicorn 19.7.1
+[2018-03-05 14:20:22 +0800] [2027] [INFO] Listening at: http://0.0.0.0:8007 (2027)
+[2018-03-05 14:20:22 +0800] [2027] [INFO] Using worker: gevent
+[2018-03-05 14:20:22 +0800] [2030] [INFO] Booting worker with pid: 2030
+[2018-03-05 14:20:22 +0800] [2031] [INFO] Booting worker with pid: 2031
+[2018-03-05 14:20:22 +0800] [2032] [INFO] Booting worker with pid: 2032
+[2018-03-05 14:20:22 +0800] [2033] [INFO] Booting worker with pid: 2033
+[2018-03-05 14:20:22 +0800] [2034] [INFO] Booting worker with pid: 2034
+[2018-03-05 14:20:22 +0800] [2035] [INFO] Booting worker with pid: 2035
+[2018-03-05 14:20:22 +0800] [2036] [INFO] Booting worker with pid: 2036
+[2018-03-05 14:20:22 +0800] [2037] [INFO] Booting worker with pid: 2037
+[2018-03-05 14:20:22 +0800] [2038] [INFO] Booting worker with pid: 2038
+[2018-03-05 14:21:15 +0800] [2027] [INFO] Handling signal: winch
+[2018-03-05 14:21:15 +0800] [2027] [INFO] Handling signal: winch
+[2018-03-05 14:21:15 +0800] [2027] [INFO] Handling signal: winch
+[2018-03-05 14:21:15 +0800] [2027] [INFO] Handling signal: winch
+[2018-03-05 14:22:28 +0800] [2027] [INFO] Handling signal: winch
+[2018-03-05 14:22:28 +0800] [2027] [INFO] Handling signal: winch
+[2018-03-05 14:22:28 +0800] [2027] [INFO] Handling signal: winch
+[2018-03-05 14:28:30 +0800] [2027] [INFO] Handling signal: int
+[2018-03-05 06:28:30 +0000] [2038] [INFO] Worker exiting (pid: 2038)
+[2018-03-05 06:28:30 +0000] [2031] [INFO] Worker exiting (pid: 2031)
+[2018-03-05 06:28:30 +0000] [2035] [INFO] Worker exiting (pid: 2035)
+[2018-03-05 06:28:30 +0000] [2037] [INFO] Worker exiting (pid: 2037)
+[2018-03-05 06:28:30 +0000] [2032] [INFO] Worker exiting (pid: 2032)
+[2018-03-05 06:28:30 +0000] [2033] [INFO] Worker exiting (pid: 2033)
+[2018-03-05 06:28:30 +0000] [2036] [INFO] Worker exiting (pid: 2036)
+[2018-03-05 06:28:30 +0000] [2030] [INFO] Worker exiting (pid: 2030)
+[2018-03-05 06:28:30 +0000] [2034] [INFO] Worker exiting (pid: 2034)
+[2018-03-05 14:28:31 +0800] [2027] [INFO] Shutting down: Master
+[2018-03-05 14:28:35 +0800] [2064] [INFO] Starting gunicorn 19.7.1
+[2018-03-05 14:28:35 +0800] [2064] [INFO] Listening at: http://0.0.0.0:8007 (2064)
+[2018-03-05 14:28:35 +0800] [2064] [INFO] Using worker: gevent
+[2018-03-05 14:28:36 +0800] [2067] [INFO] Booting worker with pid: 2067
+[2018-03-05 14:28:36 +0800] [2068] [INFO] Booting worker with pid: 2068
+[2018-03-05 14:28:36 +0800] [2069] [INFO] Booting worker with pid: 2069
+[2018-03-05 14:28:36 +0800] [2070] [INFO] Booting worker with pid: 2070
+[2018-03-05 14:28:36 +0800] [2071] [INFO] Booting worker with pid: 2071
+[2018-03-05 14:28:36 +0800] [2072] [INFO] Booting worker with pid: 2072
+[2018-03-05 14:28:36 +0800] [2073] [INFO] Booting worker with pid: 2073
+[2018-03-05 14:28:36 +0800] [2074] [INFO] Booting worker with pid: 2074
+[2018-03-05 14:28:36 +0800] [2075] [INFO] Booting worker with pid: 2075
+[2018-03-05 14:29:50 +0800] [2064] [INFO] Handling signal: int
+[2018-03-05 06:29:50 +0000] [2068] [INFO] Worker exiting (pid: 2068)
+[2018-03-05 06:29:50 +0000] [2074] [INFO] Worker exiting (pid: 2074)
+[2018-03-05 06:29:50 +0000] [2069] [INFO] Worker exiting (pid: 2069)
+[2018-03-05 06:29:50 +0000] [2071] [INFO] Worker exiting (pid: 2071)
+[2018-03-05 06:29:50 +0000] [2067] [INFO] Worker exiting (pid: 2067)
+[2018-03-05 06:29:50 +0000] [2070] [INFO] Worker exiting (pid: 2070)
+[2018-03-05 06:29:50 +0000] [2072] [INFO] Worker exiting (pid: 2072)
+[2018-03-05 06:29:50 +0000] [2075] [INFO] Worker exiting (pid: 2075)
+[2018-03-05 06:29:50 +0000] [2073] [INFO] Worker exiting (pid: 2073)
+[2018-03-05 14:29:51 +0800] [2064] [INFO] Shutting down: Master
+[2018-03-05 14:29:55 +0800] [2079] [INFO] Starting gunicorn 19.7.1
+[2018-03-05 14:29:55 +0800] [2079] [INFO] Listening at: http://0.0.0.0:8007 (2079)
+[2018-03-05 14:29:55 +0800] [2079] [INFO] Using worker: gevent
+[2018-03-05 14:29:55 +0800] [2082] [INFO] Booting worker with pid: 2082
+[2018-03-05 14:29:55 +0800] [2083] [INFO] Booting worker with pid: 2083
+[2018-03-05 14:29:55 +0800] [2084] [INFO] Booting worker with pid: 2084
+[2018-03-05 14:29:55 +0800] [2085] [INFO] Booting worker with pid: 2085
+[2018-03-05 14:29:55 +0800] [2086] [INFO] Booting worker with pid: 2086
+[2018-03-05 14:29:55 +0800] [2087] [INFO] Booting worker with pid: 2087
+[2018-03-05 14:29:55 +0800] [2088] [INFO] Booting worker with pid: 2088
+[2018-03-05 14:29:55 +0800] [2089] [INFO] Booting worker with pid: 2089
+[2018-03-05 14:29:55 +0800] [2090] [INFO] Booting worker with pid: 2090
+[2018-03-05 08:08:55 +0000] [11] [INFO] Starting gunicorn 19.7.1
+[2018-03-05 08:08:55 +0000] [11] [INFO] Listening at: http://0.0.0.0:8007 (11)
+[2018-03-05 08:08:55 +0000] [11] [INFO] Using worker: gevent
+[2018-03-05 08:08:55 +0000] [14] [INFO] Booting worker with pid: 14
+[2018-03-05 08:08:56 +0000] [15] [INFO] Booting worker with pid: 15
+[2018-03-05 08:08:56 +0000] [16] [INFO] Booting worker with pid: 16
+[2018-03-05 08:16:19 +0000] [11] [INFO] Starting gunicorn 19.7.1
+[2018-03-05 08:16:19 +0000] [11] [INFO] Listening at: http://0.0.0.0:8007 (11)
+[2018-03-05 08:16:19 +0000] [11] [INFO] Using worker: gevent
+[2018-03-05 08:16:19 +0000] [14] [INFO] Booting worker with pid: 14
+[2018-03-05 08:16:20 +0000] [15] [INFO] Booting worker with pid: 15
+[2018-03-05 08:16:20 +0000] [16] [INFO] Booting worker with pid: 16
