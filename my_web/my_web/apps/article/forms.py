@@ -1,6 +1,5 @@
 from django import forms
 
-from pagedown.widgets import AdminPagedownWidget
 from .models import Article
 
 from my_web.apps.mkeditor.widgets import MarkdownWidget

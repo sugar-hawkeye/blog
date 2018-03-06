@@ -3,7 +3,6 @@ from django.contrib import admin
 from my_web.apps.article.models import Article
 from django.db import models
 
-from pagedown.widgets import AdminPagedownWidget
 
 from .forms import ArticleForm
 from my_web.libs.Utils import save_md,read_md

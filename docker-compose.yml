@@ -21,6 +21,7 @@ services:
             - db:db
         volumes:
             - /workspace/blog/my_web:/django_env
+            - /workspace/blog/my_web/my_web/logs:/django_env/my_web/logs
         working_dir: /django_env
         command: bash -c "python manage.py makemigrations && python manage.py migrate &&  gunicorn my_web.wsgi -c gunicorn.conf"
 

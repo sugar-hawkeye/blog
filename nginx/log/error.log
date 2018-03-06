@@ -28,3 +28,5 @@
 2018/03/06 01:07:44 [error] 13#0: *47 connect() failed (113: No route to host) while connecting to upstream, client: 218.76.54.47, server: spreader.online, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.21.0.3:8007/favicon.ico", host: "www.spreader.online", referrer: "http://www.spreader.online/home/"
 2018/03/06 01:07:47 [error] 13#0: *47 connect() failed (113: No route to host) while connecting to upstream, client: 218.76.54.47, server: spreader.online, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.21.0.3:8007/favicon.ico", host: "www.spreader.online", referrer: "http://www.spreader.online/manager/article/article/07d5991f-1d7a-459d-a737-be09c4373514/change/"
 2018/03/06 01:22:09 [error] 13#0: *51 connect() failed (113: No route to host) while connecting to upstream, client: 47.93.90.175, server: spreader.online, request: "GET / HTTP/1.1", upstream: "http://172.21.0.3:8007/", host: "39.104.28.25:80"
+2018/03/06 03:23:29 [emerg] 7#0: host not found in upstream "web" in /etc/nginx/sites-enabled/blog:9
+2018/03/06 03:23:29 [emerg] 8#0: host not found in upstream "web" in /etc/nginx/sites-enabled/blog:9

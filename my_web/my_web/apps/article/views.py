@@ -1,4 +1,3 @@
-import markdown
 
 from django.http import Http404
 from django.http import HttpResponseBadRequest
