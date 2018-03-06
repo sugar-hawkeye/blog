@@ -1,3 +1,3 @@
 *.pyc
-/my_web/my_web/uploads/*.md
+/my_web/my_web/uploads
 /mysql/data/*
