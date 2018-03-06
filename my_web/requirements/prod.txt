@@ -3,3 +3,4 @@
 
 gevent==1.2.2
 gunicorn==19.7.1
+django-logging-json==1.15
