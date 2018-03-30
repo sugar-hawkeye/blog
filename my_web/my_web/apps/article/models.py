@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-import uuid
+
 from django.db import models
 from django.contrib.auth.models import User
-from django.urls import reverse
+from uidgenerator.models import UIDField
 
+from rest_framework.reverse import reverse
 
 from my_web.apps.tag.models import Tag
 
@@ -15,7 +16,7 @@ class Article(models.Model):
     created_by = models.ForeignKey(User, editable=False, on_delete=models.SET_NULL, verbose_name="创建人", null=True,
                                    blank=True)
 
-    article_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    article_id = UIDField(primary_key=True,editable=False)
     title = models.CharField(max_length=50, verbose_name='文章标题',unique=True)
     content = models.TextField(verbose_name='文章内容',null=True,blank=True)
 
@@ -29,8 +30,10 @@ class Article(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        from my_web.apps.article.views import  articleDetailView
-        return reverse(articleDetailView,args=[self.article_id])
+        # from my_web.apps.article.views import  articleDetailView
+        # return reverse(articleDetailView,args=[self.article_id])
+        url = reverse('article-detail',args=[self.article_id])
+        return url
 
 
 

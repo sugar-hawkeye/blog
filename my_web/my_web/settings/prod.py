@@ -17,6 +17,7 @@ ALLOWED_HOSTS = ['spreader.online','www.spreader.online','127.0.0.1']
 
 
 
+
 INSTALLED_APPS += [
     'django_logging',
 ]

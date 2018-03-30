@@ -22,8 +22,8 @@ from my_web.settings import common,dev
 
 urlpatterns = [
     url(r'^manager/', admin.site.urls),
-    url(r'^home/',include('my_web.apps.article.urls')),
-    url(r'^home/',include('my_web.apps.tag.urls')),
+    url(r'^',include('my_web.apps.article.urls')),
+    url(r'^',include('my_web.apps.tag.urls')),
 ]
 
 
