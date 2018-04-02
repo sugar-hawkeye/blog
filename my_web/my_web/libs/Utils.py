@@ -87,6 +87,62 @@ class Pagination(object):
         }
         return pagination
 
+class Paginator:
+
+    @classmethod
+    def page(self, count, cur_page=1, page_size=3):
+        try:
+            count = int(count)
+            cur_page = int(cur_page)
+            page_size = int(page_size)
+        except:
+            raise Exception('Param is not an integer')
+
+        if count % page_size:
+            num_pages = (count // page_size) + 1
+        num_pages = count // page_size
+
+        cur_page = 1 if cur_page < 1 else cur_page
+        cur_page = num_pages if cur_page > num_pages else cur_page
+
+        pre_page = cur_page - 1
+        pre_page = 1 if pre_page < 1 else pre_page
+
+        next_page = cur_page + 1
+        next_page = num_pages if next_page > num_pages else next_page
+
+        page_items = []
+        if num_pages <= 5:
+            page_items = range(1, count + 1)
+
+        page_items = {1, cur_page - 1, cur_page, cur_page + 1, num_pages}
+        if cur_page < 4:
+            page_items.add(2)
+            page_items.add(3)
+        if cur_page >= num_pages - 3:
+            page_items.add(num_pages - 1)
+            page_items.add(num_pages - 2)
+
+        page_items = [
+            idx for idx in sorted(list(page_items))
+            if 0 < idx <= num_pages
+        ]
+
+        if cur_page > 4:
+            page_items.insert(1, None)
+        if cur_page < num_pages - 3:
+            page_items.insert(len(page_items) - 1, None)
+
+        pagination = {
+            'counts': count,
+            'num_pages': num_pages,
+            'cur_page': cur_page,
+            'pre_page': pre_page,
+            'next_page': next_page,
+            'page_items': page_items,
+        }
+        return pagination
+
 class MDStorage(Storage):
 
     def __init__(self, option=None):

@@ -9,10 +9,10 @@ from my_web.apps.tag.models import Tag
 from my_web.apps.article.serializers import ArticleSerializer
 from my_web.apps.tag.serializers import TagSerializer
 
-from my_web.libs.Utils import Pagination,read_md
+from my_web.libs.Utils import Pagination,read_md,Paginator
 
 class ArticleList(APIView):
-    renderer_classes = (TemplateHTMLRenderer)
+    renderer_classes = (TemplateHTMLRenderer,)
 
     def get(self,request,format=None):
         cur_page = int(request.query_params.get('page',1))

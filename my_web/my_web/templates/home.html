@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load pull_content %}
+
 {% block content %}
     <ul class="note-list">
         {% for article in articles %}
@@ -16,7 +17,6 @@
 
 
     </ul>
-
     <div class="pagination">
         <ul >
             {% for page_item in pagination.page_items %}
